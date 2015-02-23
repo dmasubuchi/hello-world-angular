@@ -1,0 +1,56 @@
+<div>
+    <span style="float:right;" class="label label-primary">{{structure.family}}</span>
+    <h1>{{structure.name}}</h1>
+    <hr>
+    <p class="lead">{{structure.description}}</p>
+
+    <div class="row">
+        <div class="col-xs-6">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">Operations</div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Symbol</th>
+                            <th>Arity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in structure.operations">
+                            <td>{{item.operator.name}}</td>
+                            <td><span ng-bind-html="item.symbol"></span></td>
+                            <td>{{item.operator.arity}}</td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+
+        </div>
+        <div class="col-xs-6">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">Laws</div>
+                <table class="table table-striped table-hover ">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="law in structure.laws">
+                            <td>{{law.name}}</td>
+                            <td>
+                                <span ng-bind-html="law.description"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+
+        </div>
+    </div>
+
+</div>
