@@ -1,3 +1,10 @@
+/*
+ * My first take on Angular.js.
+ *
+ * (c) 2015 Johannes Hildén
+ *
+ */
+
 var App = (function(){
 
     var Operation = {
