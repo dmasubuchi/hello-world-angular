@@ -46,8 +46,16 @@ var App = (function(){
         commutativity: {
             name: "Commutativity",
             description: "&forall;a, b &in; S : a &sstarf; b = b &sstarf; a"
-        }
-    };
+        },
+        identity: {
+            name: "Identity Law",
+            description: "&exist;e s.t. &forall;a &in; S : e &sstarf; a = a = a &sstarf; e"
+        },
+        inverse: {
+            name: "Inverse Law",
+            description: "&forall;a &in; S &exist;a<sup>-1</sup> s.t. a &sstarf; a<sup>-1</sup> = e = a<sup>-1</sup> &sstarf; a"
+        },
+      };
 
     var Structure = {
         "group": {
@@ -67,7 +75,7 @@ var App = (function(){
                     operator: Operation.groupOperation
                 }
             ],
-            laws: [Law.associativity, Law.closure],
+            laws: [Law.closure, Law.associativity, Law.identity, Law.inverse],
             family: "group-like"
         },
         "semigroup": {
